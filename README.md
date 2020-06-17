@@ -8,6 +8,8 @@ Install dependencies
 $ yarn install
 ```
 
+Duplicate `.env.sample` to `.env` and define properties.
+
 ### IOS specific
 
 ```sh
