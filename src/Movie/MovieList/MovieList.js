@@ -1,10 +1,9 @@
 import React, {memo} from 'react';
-import {SafeAreaView, Text} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
+import {Text} from 'react-native';
 import {MovieListItem} from './MovieListItem';
-import * as S from './MovieList.styles';
+import {ScrollableView} from '../../Common';
 
-const MovieList = ({loading, movies, error}) => {
+const MovieList = ({loading, movies, error, onPress}) => {
   const content = () => {
     if (loading) {
       return <Text>Loading</Text>;
@@ -12,22 +11,17 @@ const MovieList = ({loading, movies, error}) => {
     if (error) {
       return <Text>{error}</Text>;
     }
-    return (
-      <ScrollView contentContainerStyle={S.ScrollViewContent}>
-        <S.Container>
-          {movies.map((movie, key) => (
-            <MovieListItem
-              movie={movie}
-              key={movie.id}
-              last={key === movies.length - 1}
-            />
-          ))}
-        </S.Container>
-      </ScrollView>
-    );
+    return movies.map((movie, key) => (
+      <MovieListItem
+        movie={movie}
+        key={movie.id}
+        last={key === movies.length - 1}
+        onPress={onPress}
+      />
+    ));
   };
 
-  return <SafeAreaView>{content()}</SafeAreaView>;
+  return <ScrollableView>{content()}</ScrollableView>;
 };
 
 export default memo(MovieList);

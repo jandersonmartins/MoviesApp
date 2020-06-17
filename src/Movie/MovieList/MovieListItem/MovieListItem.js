@@ -1,9 +1,9 @@
 import React from 'react';
 import * as S from './MovieListItem.styles';
 
-const MovieListItem = ({movie, last}) => {
+const MovieListItem = ({movie, last, onPress}) => {
   return (
-    <S.Container last={last}>
+    <S.Container last={last} onPress={() => onPress(movie)}>
       <S.Image
         source={{uri: `https://image.tmdb.org/t/p/w200/${movie.backdrop_path}`}}
         resizeMode="cover"

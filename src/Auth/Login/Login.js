@@ -12,6 +12,10 @@ const Login = () => {
   return (
     <SafeAreaView>
       <S.Container>
+        <S.TitleContainer>
+          <S.Title>Movie App - Press Start to explore</S.Title>
+        </S.TitleContainer>
+
         <Button title="Start" onPress={handleOnPress} />
       </S.Container>
     </SafeAreaView>

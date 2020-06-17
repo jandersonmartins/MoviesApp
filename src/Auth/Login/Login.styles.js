@@ -7,4 +7,12 @@ const Container = styled.View`
   align-items: center;
 `;
 
-export {Container};
+const TitleContainer = styled.View`
+  margin-bottom: 10px;
+`;
+
+const Title = styled.Text`
+  font-size: 16px;
+`;
+
+export {Container, TitleContainer, Title};
