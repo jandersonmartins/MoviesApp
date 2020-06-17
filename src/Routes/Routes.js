@@ -1,7 +1,7 @@
 import React from 'react';
-import {Text} from 'react-native';
 import {AuthRoutes} from '../Auth/AuthRoutes';
+import {MovieRoutes} from '../Movie';
 
-const Routes = ({started}) => (started ? <Text>Home</Text> : <AuthRoutes />);
+const Routes = ({started}) => (started ? <MovieRoutes /> : <AuthRoutes />);
 
 export default Routes;

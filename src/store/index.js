@@ -8,7 +8,7 @@ const {run: runSaga} = sagaMiddleware;
 
 const store = configureStore({
   reducer: createReducer(),
-  middleware: [...getDefaultMiddleware(), sagaMiddleware],
+  middleware: [...getDefaultMiddleware({thunk: false}), sagaMiddleware],
   enhancers: [
     createInjectorsEnhancer({
       createReducer,
