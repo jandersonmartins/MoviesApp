@@ -27,3 +27,7 @@ And in other terminal:
 ```sh
 $ npx react-native run-ios --simulator="iPhone 5s"
 ```
+
+```sh
+$ npx react-native run-android
+```
